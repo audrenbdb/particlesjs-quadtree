@@ -1,4 +1,4 @@
-#QuadTree js implementation of particles.js
+# QuadTree js implementation of particles.js
 
 Just the library from vincent garreau with trimmed settings to fit my needs.
 
