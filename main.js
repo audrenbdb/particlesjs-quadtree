@@ -18,9 +18,9 @@ const bounce = true;
 
 const mouse = { x: 0, y: 0}
 let particlesList = [];
-const links = [[],[],[],[]];
-const linkBatchAlphas = [0.1, 0.3, 0.7, 0.9];
-const linkBatches = links.length;
+let links = [];
+let linkBatchAlphas = [];
+const linkBatches = 10;
 const linkPool = [];
 let quadTree;
 let boundary;
@@ -29,6 +29,12 @@ canvas.style.height = "100%";
 canvas.style.width = "100%";
 W = canvas.width = canvas.offsetX;
 H = canvas.height = canvas.offsetY;
+
+/*set batches*/
+for (var i = 1 / (linkBatches + 1); i < 1; i += 1/ (linkBatches+1)) {
+    links.push([]);
+    linkBatchAlphas.push(i);
+}
 
 /*controls*/
 const addControl = document.getElementById("add-particle")
