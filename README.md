@@ -1,7 +1,5 @@
 # QuadTree js implementation of particles.js
 
-Just the library from vincent garreau with trimmed settings to fit my needs.
+Optimizations of particles.js library from vincent gareau thanks to a quad tree and several other optimizations to get 60 fps even with 1k ~ particles.
 
-Quad tree because why not.
-
-Codepen : https://codepen.io/poimu/pen/OdEmBQ
+Demo : audrenbdb.github.io/particles/vanilla/index.html

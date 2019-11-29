@@ -1,24 +1,61 @@
 <html>
-
 <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
     <style>
-        .assessment {
-            background: #000966;
-            height: 100vh;
-            width: 100vw;
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Roboto, sans-serif;
         }
 
-        canvas {
-            height: 100%;
+        .controls {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+
+        .control-item {
+            width: 130px;
+            background: #fff;
+            padding: 6px;
+            margin: 5px;
+            text-align: center;
+            color: rgba(0, 0, 0, .7);
+            user-select: none;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .particles-wrapper {
             width: 100%;
+            background: #161b6b;
+            position: absolute;
+            bottom: 0;
+            top: 0;
+        }
+
+        #info {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #FFF;
+            background: rgba(0, 0, 0, .2);
         }
     </style>
-</head>
-
-<body>
-    <div class="assessment">
-        <canvas></canvas>
+    <div class="particles-wrapper">
+        <canvas id="canvas"></canvas>
+        <code id="info"></code>
     </div>
+    <div class="controls">
+        <div id="add-particle" class="control-item">Add</div>
+        <div id="remove-particle" class="control-item">Remove</div>
+    </div>
+    <script src="main.js"></script>
 </body>
-<script src="quadtree-particles-min.js"></script>
+
 </html>
